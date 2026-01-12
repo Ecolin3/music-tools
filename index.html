@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 音乐工具箱 | Music Tools</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --primary-color: #00ff88;
+            --accent-color: #00ccff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #888;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AI 音乐工具箱</h1>
+    <p class="subtitle">Music Tools Collection</p>
+
+    <div class="container">
+        <!-- 金耳朵入口 -->
+        <a href="../golden_ear/" class="card">
+            <div class="icon">👂</div>
+            <h2>金耳朵挑战</h2>
+            <p>Golden Ear Challenge</p>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #888;">
+                测试你的听觉年龄<br>
+                你能听到 18000Hz 吗？
+            </p>
+        </a>
+
+        <!-- BPM 测速器入口 -->
+        <a href="../bpm_counter/" class="card">
+            <div class="icon">🥁</div>
+            <h2>BPM 节奏大师</h2>
+            <p>BPM Counter & Genre Detector</p>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #888;">
+                点击测速 & 风格识别<br>
+                看看你的节奏感有多准
+            </p>
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2024 Music Tools. Designed for Music Lovers.
+    </div>
+
+</body>
+</html>
