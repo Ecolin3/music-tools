@@ -13,49 +13,6 @@
             --accent-color: #00ccff;
         }
 
-        /* 微信引导遮罩层 */
-        #wx-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 9999;
-            text-align: center;
-            padding-top: 100px;
-        }
-        #wx-overlay p {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-        #wx-arrow {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            border-right: 4px solid #fff;
-            border-top: 4px solid #fff;
-            transform: rotate(-10deg);
-            border-top-right-radius: 4px;
-        }
-        #wx-arrow::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 15px solid #fff;
-            transform: translate(5px, -10px) rotate(45deg);
-            display: none; /* 简化箭头 */
-        }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -136,27 +93,9 @@
     </style>
 </head>
 <body>
-    <!-- 微信引导遮罩 -->
-    <div id="wx-overlay">
-        <div id="wx-arrow"></div>
-        <p>请点击右上角 ...</p>
-        <p>选择 <strong>在浏览器打开</strong></p>
-        <p style="font-size: 3rem; margin-top: 30px;">🌏</p>
-    </div>
 
     <h1>AI 音乐工具箱</h1>
     <p class="subtitle">Music Tools Collection</p>
-    
-    <script>
-        // 检测是否为微信浏览器
-        function isWeChat() {
-            return /MicroMessenger/i.test(navigator.userAgent);
-        }
-
-        if (isWeChat()) {
-            document.getElementById('wx-overlay').style.display = 'block';
-        }
-    </script>
 
     <div class="container">
         <!-- 金耳朵入口 -->
